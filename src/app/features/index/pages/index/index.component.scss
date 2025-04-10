@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:host {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+#main-index-container {
+  box-sizing: border-box;
+  height: 100vh;
+  //width: 100vw;
+  //background-color: #8b5637;
+  //background-color: #714333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Lobster", sans-serif;
+  font-size: 5.5rem;
+  color: #FAEDDA;
+  //padding-left: 10vw;
+
+  h1 {
+    //padding-left: 15vmin;
+    max-width: 45vw;
+  }
+
+  p {
+    font-family: 'Lobster', sans-serif;
+    font-size: 3rem;
+    color: #FAEDDA;
+
+  }
+}
+
+.test {
+  max-width: 50vw;
+}
+

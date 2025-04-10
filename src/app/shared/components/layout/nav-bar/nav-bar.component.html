@@ -1,0 +1,16 @@
+<nav>
+  <a href="/" id="logo-link"><img src="logo.png" alt="Logo Cent pour cent cookies"></a>
+  <ul class="links">
+    @for (link of links(); track $index) {
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" #rla="routerLinkActive">
+        <a [routerLink]="link.url">
+          <fa-icon *ngIf="rla.isActive" [icon]="faCookieBite" class="active-icon"></fa-icon>
+          {{ link.name }}</a>
+      </li>
+    }
+  </ul>
+  <ul class="socials">
+    <a href="https://www.facebook.com/centpourcentcookies" target="_blank"><li><fa-icon [icon]="faFacebook" size="xl" class="brand-icon"></fa-icon></li></a>
+    <a href="" target="_blank"><li><fa-icon [icon]="faInstagram" size="xl" class="brand-icon"></fa-icon></li></a>
+  </ul>
+</nav>
