@@ -5,36 +5,89 @@
   z-index: 2;
 }
 
+#index-container {
+  position: relative;
+  min-height: 100vh;
 
+  .home-content{
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background-image: url("/cookies-bg.jpg");
+    background-size: cover;
+    width: 100vw;
+    //background-color: #714333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Lobster", sans-serif;
+    font-size: 5.5rem;
+    color: #FDE2A6;
+    padding-left: 10vw;
 
-#main-index-container {
-  box-sizing: border-box;
-  height: 100vh;
-  //width: 100vw;
-  //background-color: #8b5637;
-  //background-color: #714333;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: "Lobster", sans-serif;
-  font-size: 5.5rem;
-  color: #FAEDDA;
-  //padding-left: 10vw;
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vmax;
+      height: 100vmin;
+      background-color: rgba(0, 0, 0, 0.2);
+      z-index: 0;
+      pointer-events: none;
+    }
 
-  h1 {
-    //padding-left: 15vmin;
-    max-width: 45vw;
+    h1 {
+      position: relative;
+      display: inline-block;
+      max-width: 45vw;
+
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+      &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        color: transparent;
+        background-image: repeating-linear-gradient(
+            45deg,
+            rgba(253, 226, 166, 1) 0px,
+            rgba(253, 226, 166, 1) 2px,
+            transparent 2px,
+            transparent 4px
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        z-index: -1;
+      }
+    }
+
+    p {
+      font-family: 'Lobster', sans-serif;
+      font-size: 3rem;
+      position: relative;
+    }
+
   }
 
-  p {
-    font-family: 'Lobster', sans-serif;
-    font-size: 3rem;
-    color: #FAEDDA;
+  .content-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 100vh;
+    //background-color: #8b5637;
+    background-color: #FAEDDA;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
+    .content {
+    }
   }
-}
 
-.test {
-  max-width: 50vw;
 }
 

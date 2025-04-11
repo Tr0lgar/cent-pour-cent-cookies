@@ -5,24 +5,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: solid 1px red;
+  //border: solid 1px red;
 }
 
 .main-body {
-  background-image: url("../public/cookies-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
-
-  &::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vmax;
-    height: 100vmin;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 0;
-    pointer-events: none;
-  }
 }

@@ -1,4 +1,4 @@
-<nav>
+<nav [ngStyle]="{'background-color': bgColor}">
   <a href="/" id="logo-link"><img src="logo.png" alt="Logo Cent pour cent cookies"></a>
   <ul class="links">
     @for (link of links(); track $index) {
