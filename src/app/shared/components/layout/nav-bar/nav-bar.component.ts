@@ -24,7 +24,7 @@ export class NavBarComponent {
   faFacebook = faFacebook;
   faInstagram = faInstagram;
 
-  bgColor: string = 'rgba(50, 50, 50, 0)';
+  bgColor: string = 'rgba(0, 0, 0, 0.2)';
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -35,7 +35,7 @@ export class NavBarComponent {
 
     const factor = Math.min(scrollPosition / (clientHeight - (clientHeight * 15 / 100)), 1);
 
-    const initial = { r: 50, g: 50, b: 50, a: 0 };
+    const initial = { r: 0, g: 0, b: 0, a: 0.2 };
     const final = { r: 139, g: 86, b: 55, a: 1 };
 
     const r = Math.round(initial.r + (final.r - initial.r) * factor);

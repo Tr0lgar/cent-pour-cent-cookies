@@ -153,6 +153,71 @@
         }
       }
 
+      .family-card {
+        z-index: 0;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        max-width: 75vw;
+        margin: 5rem 0;
+        padding: 50px 30px 50px 20px;
+        background: #ffffff;
+        border-radius: 24px;
+        color: #714333;
+
+        img {
+          max-width: 280px;
+          width: 28vw;
+          height: 300px;
+          object-fit: cover;
+          margin-left: -60px;
+          margin-right: 30px;
+          border-radius: inherit;
+          box-shadow: 6px 6px 40px rgb(0 0 0 / 20%);
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          h2 {
+            margin-right: 30px;
+            font-size: 2.5rem;
+            margin-bottom: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+          }
+
+          p {
+            margin: 0 3rem 0 3rem;
+            font-size: 1.2rem;
+            text-align: center;
+          }
+        }
+
+        @media (width <= 1200px) {
+          margin: 5rem 2rem;
+          padding-left: 50px;
+          padding-right: 50px;
+          width: 100%;
+          text-align: center;
+          flex-direction: column;
+
+          h2 {
+            margin-right: 0;
+            font-size: 2rem;
+          }
+
+          img {
+            margin: -100px 0 30px 0;
+            width: 100%;
+            //max-width: 1000px;
+          }
+        }
+      }
+
       .display-section.reversed {
         flex-direction: row-reverse;
 
@@ -202,6 +267,7 @@
 
     .boxes {
       width: 100%;
+      margin-top: 5rem;
       padding: 2rem 5%;
       background: none;
       text-align: center;
@@ -216,23 +282,36 @@
 
       .boxes-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
         margin-bottom: 1.5rem;
 
         .box-item {
           position: relative;
-          overflow: hidden;
+          display: inline-block;
+
           img {
+            display: block;
             width: 100%;
             aspect-ratio: 1;
-            object-fit: cover;
-            border-radius: 0;
             transition: transform 0.3s ease;
 
             &:hover {
               transform: scale(1.05);
             }
+          }
+
+          .price {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #FAEDDA;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
           }
         }
       }
