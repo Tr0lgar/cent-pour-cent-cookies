@@ -11,3 +11,39 @@
 .main-body {
   font-family: 'Poppins', sans-serif;
 }
+
+.button-link {
+  text-decoration: none;
+  color: #FAEDDAFF;
+  position: relative;
+  align-self: center;
+  background-color: #C77D51FF;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  margin-top: 5rem;
+  transition: transform 0.3s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: -6px;
+    bottom: -6px;
+    background: repeating-linear-gradient(
+        45deg,
+        #0000004C 0px 2px,
+        transparent 2px 4px
+    );
+    border-radius: 53px;
+    z-index: -1;
+    pointer-events: none;
+    transition: inherit;
+  }
+
+  &:hover::after {
+    transform: translate(-2px, -2px);
+  }
+}

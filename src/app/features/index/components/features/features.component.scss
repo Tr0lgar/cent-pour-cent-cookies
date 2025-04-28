@@ -1,0 +1,70 @@
+// Variables
+$color-primary: #8B5637;
+$color-secondary: #c77d51;
+$color-text-primary: #714333;
+$color-bg: #FAEDDA;
+$color-text-secondary: #FDE2A6;
+$color-text-dark: rgba(0, 0, 0, 0.7);
+$color-bg-light: #fff6ee;
+$color-gradient: rgba(0, 0, 0, 0.3);
+$font-family-lobster: 'Lobster', sans-serif;
+$font-size-title: 5.5rem;
+$font-size-subtitle: 3rem;
+$font-size-paragraph: 1.2rem;
+$border-radius: 24px;
+
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import '../../../../../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 75vw;
+  margin: 5rem auto;
+  padding: 0 20px;
+
+  .feature-card {
+    background: $color-secondary;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba($color-text-primary, 0.1);
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h3 {
+      color: $color-bg-light;
+      font-size: 1.5rem;
+      margin: 1.5rem 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      min-height: 5rem;
+    }
+
+    img {
+      max-width: 30%;
+      min-width: 30%;
+    }
+
+    p {
+      color: $color-bg-light;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+  }
+
+  @media (width <= 1200px) {
+    grid-template-columns: 1fr;
+    max-width: 90vw;
+    gap: 1.5rem;
+
+    .feature-card {
+      padding: 1.5rem;
+    }
+  }
+}

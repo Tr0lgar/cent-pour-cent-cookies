@@ -1,0 +1,44 @@
+// Variables
+$color-primary: #8B5637;
+$color-secondary: #c77d51;
+$color-text-primary: #714333;
+$color-bg: #FAEDDA;
+$color-text-secondary: #FDE2A6;
+$color-text-dark: rgba(0, 0, 0, 0.7);
+$color-bg-light: #fff6ee;
+$color-gradient: rgba(0, 0, 0, 0.3);
+$font-family-lobster: 'Lobster', sans-serif;
+$font-size-title: 5.5rem;
+$font-size-subtitle: 3rem;
+$font-size-paragraph: 1.2rem;
+$border-radius: 24px;
+
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import '../../../../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+
+:host {
+  position: relative;
+  z-index: 2;
+}
+
+#index-container {
+  position: relative;
+  min-height: 100vh;
+
+  .content-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 100vh;
+    background-color: $color-bg;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
